@@ -19,7 +19,7 @@
                             </p>
                         </div>
                     </div>
-                    @else
+                @else
                     <div class="col-md-4">
                         <div class="card-body">
                             <h2>{{ $blog['title'] }}</h2>
