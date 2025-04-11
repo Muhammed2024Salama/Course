@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     /**
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\View\View
+     * Handle the incoming request.
      */
-    public function index()
+    public function __invoke(Request $request)
     {
         $blogs = [
             [
