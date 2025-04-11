@@ -32,6 +32,14 @@
                 @endif
             @endforeach
 
+            @php
+                $data = true;
+            @endphp
+
+            @isset($data)
+                <div class="alert alert-success">Success</div>
+            @endisset
+
         </div>
     </main>
 @endsection
