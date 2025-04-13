@@ -24,9 +24,17 @@ Route::get('/', function () {
 
 Route::get('/home', HomeController::class);
 
-Route::get('/about', [AboutController::class, 'index'])->name('about');
-Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::get('/about', [AboutController::class, 'index'])
+    ->name('about');
+
+Route::get('/contact', [ContactController::class, 'index'])
+    ->name('contact');
 
 Route::resource('/blog',BlogController::class);
 
-Route::get('/login',[LoginController::class,'index'])->name('login');
+Route::get('/login',[LoginController::class,'index'])
+    ->name('login');
+
+// CSRF TOKEN
+Route::post('/login',[LoginController::class,'handleLogin'])
+    ->name('login.submit');
