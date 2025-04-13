@@ -16,6 +16,13 @@ class LoginController extends Controller
 
     public function handleLogin(Request $request)
     {
-        dd($request->all());
+        $rules = [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'password' => 'required'
+        ];
+
+        $request->validate($rules);
+
     }
 }

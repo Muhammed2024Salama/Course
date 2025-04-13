@@ -5,6 +5,13 @@
         <div class="col-md-4">
             <h2 class="mb-4">Login</h2>
 
+                {{-- Error Validations --}}
+            @if($errors->any())
+                @foreach($errors->all() as $error)
+                    <div class="alert alert-danger">{{ $error }}}</div>
+                @endforeach
+            @endif
+
             <div class="card">
                 <div class="card-body">
                     <form action="{{ route('login.submit') }}" method="post">
